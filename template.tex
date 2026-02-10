@@ -4,12 +4,13 @@
 \usepackage[T1]{fontenc}
 \usepackage{titlesec}
 \usepackage[hidelinks]{hyperref}
+\usepackage{lipsum}
 
 \newcommand{\version}{01}
-\newcommand{\pubyear}{2023}
-\newcommand{\origyear}{2023}
-\newcommand{\origmonth}{July}
-\newcommand{\origday}{16}
+\newcommand{\pubyear}{2026}
+\newcommand{\origyear}{2026}
+\newcommand{\origmonth}{February}
+\newcommand{\origday}{9}
 
 % DRAS  - Durham Region Aeronautical Society   %
 % AVRRL - Avionics and Robotics Research Lab   %
@@ -22,41 +23,28 @@
 % SP - Special Publication   %
 % GM - General Memorandum    %
 % GR - General Report        %
+% LB - Lab Report            %
+
 \newcommand{\pubcat}{TM}
 \newcommand{\docnumber}{001}
 
 \newcommand{\codegen}{\department/\pubcat-\pubyear\docnumber-\version}
 
 \newcommand{\doctitle}{Report Template}
-\newcommand{\authorgen}{Brandon Boisvert$^{\ *}$}
+\newcommand{\authorgen}{AuthorFirst AuthorLast\\AuthorAffil}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Bibliography Configuration %
 
-\usepackage[square,numbers]{natbib}
-\bibliographystyle{abbrvnat}
+\usepackage[numbers]{natbib}
+\bibliographystyle{IEEEtranN}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Nomenclature Configuration %
-
-\usepackage{nomencl}
-\makenomenclature
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Font Configuration %
-
-\usepackage{fontspec}
-\setmainfont{Open Sans}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Abstract Configuration %
 
-\renewcommand\abstractname{Summary}
+\renewcommand\abstractname{Abstract}
 
 \makeatletter
 \renewenvironment{abstract}{
@@ -101,10 +89,6 @@
             \emph{\authorgen}\\
     \end{flushleft}
         \vfill
-
-    \begin{flushleft}
-        \emph{$^{*}$ Durham Region Aeronautical Society, Oshawa, Ontario}\\ 
-    \end{flushleft}
     \rule{\textwidth}{2pt}
     \begin{flushleft}
         Origin Date: \origmonth\ \origday,\ \origyear\\
@@ -119,11 +103,19 @@
 % Front Matter %
 
 \pagenumbering{roman}
-\section*{Acknowledgements}
-\addcontentsline{toc}{section}{Acknowledgements}
-\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Acknowledgements (Uncomment if Required) %
+
+% \section*{Acknowledgements}
+% \addcontentsline{toc}{section}{Acknowledgements}
+
+
+% \clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
-    \addcontentsline{toc}{section}{Summary}
+    \addcontentsline{toc}{section}{Abstract}
     Sample summary
 \end{abstract}    
 
@@ -137,9 +129,6 @@
 \addcontentsline{toc}{section}{List of Figures}
 \listoffigures
 \clearpage
-\nomenclature{$\rho$}{=\emph{Pressure}}
-\printnomenclature
-\clearpage
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -148,8 +137,14 @@
 
 \pagenumbering{arabic}
 \section{Introduction}
-Hello World!\cite{einstein, examplebook}
+\lipsum
 
+\section{Methods and Materials}
+\lipsum
+\section{Procedure}
+\lipsum
+\section{Results}
+\lipsum
 
 \section{Conclusions}
 
@@ -160,7 +155,7 @@ Hello World!\cite{einstein, examplebook}
 
 \clearpage
 \addcontentsline{toc}{section}{References}
-\bibliography{references}
+%\bibliography{references}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
