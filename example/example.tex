@@ -30,13 +30,13 @@
 
 \newcommand{\codegen}{\department/\pubcat-\pubyear\docnumber-\version}
 
-\newcommand{\doctitle}{Report Template}
-\newcommand{\authorgen}{AuthorFirst AuthorLast\\AuthorAffiliation}
+\newcommand{\doctitle}{Report Example}
+\newcommand{\authorgen}{Brandon Boisvert\\Durham Region Aeronautical Society}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Bibliography Configuration %
 
 \usepackage[numbers]{natbib}
-\bibliographystyle{IEEEtranN}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -116,6 +116,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
     \addcontentsline{toc}{section}{Abstract}
+    Sample\cite{examplebook}
 \end{abstract}    
 
 \clearpage
@@ -136,13 +137,13 @@
 
 \pagenumbering{arabic}
 \section{Introduction}
-
+\lipsum
 \section{Methods and Materials}
-
+\lipsum
 \section{Procedure}
-
+\lipsum
 \section{Results}
-
+\lipsum
 
 \section{Conclusions}
 
@@ -153,7 +154,8 @@
 
 \clearpage
 \addcontentsline{toc}{section}{References}
-%\bibliography{references}
+\bibliographystyle{IEEEtranN}
+\bibliography{references}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \end{document}
